@@ -1,12 +1,41 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, RichText, MediaPlaceholder } from '@wordpress/block-editor';
+import { Button } from '@wordpress/components'
 import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { quote, authorName, authorRole } = attributes;
+	const { quote, authorName, authorRole, authorImageUrl } = attributes;
+
+	const onSelectImage = ( media ) => {
+		setAttributes( {
+			authorImageId: media.id,
+			authorImageUrl: media.url
+		} );
+	};
 
 	return (
 		<div { ...useBlockProps() }>
+			<div className="author-image-wrapper">
+				{ ! authorImageUrl ? (
+					<MediaPlaceholder 
+						onSelect={ onSelectImage }
+						allowedTypes={ [ 'image' ] }
+						multiple={ false }
+						labels={ { title: __( 'Author Image', 'testimonial-slider-block' ) } }
+					/>
+				) : (
+					<div className="image-preview">
+						<img src={ authorImageUrl } alt="" />
+						<Button
+							onClick={ () => setAttributes( { authorImageId: 0, authorImageUrl: '' } ) }
+							isDestructive
+							variant="link"
+						>
+							{ __( 'Remove Image', 'testimonial-slider-block' ) }
+						</Button>
+					</div>
+				) }
+			</div>
 			<RichText
 				tagName="p"
 				className="testimonial-text"

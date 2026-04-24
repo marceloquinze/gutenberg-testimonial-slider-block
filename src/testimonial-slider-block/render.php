@@ -11,6 +11,11 @@
  */
 ?>
 <div <?php echo get_block_wrapper_attributes(); ?>>
+	<div class="testimonial-image">
+		<?php 
+			echo wp_get_attachment_image( $attributes['authorImageId'], 'large' );
+		?>
+	</div>
 	<p class="testimonial-text">
 		<?php echo wp_kses_post( $attributes['quote'] ?? 'No quote provided' ); ?>
 	</p>
