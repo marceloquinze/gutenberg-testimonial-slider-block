@@ -1,12 +1,15 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/testimonial-slider-block",
+  "name": "create-block/testimonial-slide",
   "version": "0.1.0",
   "title": "Testimonial Slider Block",
   "category": "text",
   "icon": "format-quote",
   "description": "Example block scaffolded with Create Block tool.",
+  "parent": [
+    "create-block/testimonial-slider"
+  ],
   "example": {},
   "supports": {
     "html": false,

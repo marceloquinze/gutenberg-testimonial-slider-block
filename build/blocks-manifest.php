@@ -1,15 +1,46 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'testimonial-slider-block' => array(
+	'slider-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/testimonial-slider-block',
+		'name' => 'create-block/testimonial-slider',
+		'title' => 'Testimonial Slider',
+		'category' => 'text',
+		'icon' => 'columns',
+		'description' => 'A container for your testimonial slides.',
+		'textdomain' => 'testimonial-slider-block',
+		'editorScript' => 'file:../index.js',
+		'render' => 'file:./render.php',
+		'attributes' => array(
+			'showPagination' => array(
+				'type' => 'boolean',
+				'default' => true
+			)
+		),
+		'supports' => array(
+			'align' => array(
+				'wide',
+				'full'
+			),
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
+			)
+		)
+	),
+	'testimonial-slide' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'create-block/testimonial-slide',
 		'version' => '0.1.0',
 		'title' => 'Testimonial Slider Block',
 		'category' => 'text',
 		'icon' => 'format-quote',
 		'description' => 'Example block scaffolded with Create Block tool.',
+		'parent' => array(
+			'create-block/testimonial-slider'
+		),
 		'example' => array(
 			
 		),
