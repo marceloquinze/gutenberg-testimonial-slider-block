@@ -23,10 +23,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Edit() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    quote,
+    authorName,
+    authorRole
+  } = attributes;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get ready!', 'testimonial-slider-block')
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+      tagName: "p",
+      className: "testimonial-text",
+      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Write the testimonial...', 'testimonial-slider-block'),
+      value: quote,
+      onChange: val => setAttributes({
+        quote: val
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+      tagName: "strong",
+      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Author Name', 'testimonial-slider-block'),
+      value: authorName,
+      onChange: val => setAttributes({
+        authorName: val
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+      tagName: "span",
+      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Role / Company', 'testimonial-slider-block'),
+      value: authorRole,
+      onChange: val => setAttributes({
+        authorRole: val
+      })
+    })]
   });
 }
 
@@ -128,7 +158,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/testimonial-slider-block","version":"0.1.0","title":"Testimonial Slider Block","category":"text","icon":"format-quote","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"testimonial-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/testimonial-slider-block","version":"0.1.0","title":"Testimonial Slider Block","category":"text","icon":"format-quote","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"testimonial-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","attributes":{"quote":{"type":"string","default":""},"authorName":{"type":"string","default":""},"authorRole":{"type":"string","default":""},"authorImageId":{"type":"number"},"authorImageUrl":{"type":"string","default":""}}}');
 
 /***/ }
 

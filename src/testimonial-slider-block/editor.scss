@@ -5,5 +5,22 @@
  */
 
 .wp-block-create-block-testimonial-slider-block {
-	border: 1px dotted #f00;
+	padding: 20px;
+	border: 1px dashed #ccc;
+
+	.rich-text {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	strong.rich-text {
+		font-size: 1.1em;
+		color: #333;
+	}
+
+	span.rich-text {
+		font-size: 0.9em;
+		color: #666;
+		font-style: italic;
+	}
 }

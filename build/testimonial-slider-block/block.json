@@ -16,5 +16,26 @@
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
   "render": "file:./render.php",
-  "viewScript": "file:./view.js"
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "default": ""
+    },
+    "authorName": {
+      "type": "string",
+      "default": ""
+    },
+    "authorRole": {
+      "type": "string",
+      "default": ""
+    },
+    "authorImageId": {
+      "type": "number"
+    },
+    "authorImageUrl": {
+      "type": "string",
+      "default": ""
+    }
+  }
 }

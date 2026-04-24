@@ -21,6 +21,27 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php',
-		'viewScript' => 'file:./view.js'
+		'viewScript' => 'file:./view.js',
+		'attributes' => array(
+			'quote' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'authorName' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'authorRole' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'authorImageId' => array(
+				'type' => 'number'
+			),
+			'authorImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			)
+		)
 	)
 );

@@ -7,5 +7,19 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-testimonial-slider-block {
-  border: 1px dotted #f00;
+  padding: 20px;
+  border: 1px dashed #ccc;
+}
+.wp-block-create-block-testimonial-slider-block .rich-text {
+  display: block;
+  margin-bottom: 10px;
+}
+.wp-block-create-block-testimonial-slider-block strong.rich-text {
+  font-size: 1.1em;
+  color: #333;
+}
+.wp-block-create-block-testimonial-slider-block span.rich-text {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
 }
