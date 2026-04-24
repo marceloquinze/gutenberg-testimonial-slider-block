@@ -8,7 +8,7 @@ $wrapper_attributes = get_block_wrapper_attributes([
 ]);
 ?>
 <div <?php echo $wrapper_attributes; ?>>
-	<div class="swipper-wrapper">
+	<div class="swiper-wrapper">
 		<?php echo $content; ?>
 	</div>
 
@@ -16,6 +16,6 @@ $wrapper_attributes = get_block_wrapper_attributes([
 		<div class="swiper-pagination"></div>
 	<?php endif; ?>
 
-	<div class="swipper-button-prev"></div>
-	<div class="swipper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
 </div>	

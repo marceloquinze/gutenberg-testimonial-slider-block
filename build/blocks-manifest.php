@@ -11,6 +11,8 @@ return array(
 		'description' => 'A container for your testimonial slides.',
 		'textdomain' => 'testimonial-slider-block',
 		'editorScript' => 'file:../index.js',
+		'viewScript' => 'file:./view.js',
+		'style' => 'file:../style-index.css',
 		'render' => 'file:./render.php',
 		'attributes' => array(
 			'showPagination' => array(
