@@ -81,7 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../editor.scss */ "./src/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/testimonial-slide/editor.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -159,10 +159,10 @@ function Edit({
 
 /***/ },
 
-/***/ "./src/editor.scss"
-/*!*************************!*\
-  !*** ./src/editor.scss ***!
-  \*************************/
+/***/ "./src/testimonial-slide/editor.scss"
+/*!*******************************************!*\
+  !*** ./src/testimonial-slide/editor.scss ***!
+  \*******************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -237,7 +237,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
   \******************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/testimonial-slide","version":"0.1.0","title":"Testimonial Slider Block","category":"text","icon":"format-quote","description":"Example block scaffolded with Create Block tool.","parent":["create-block/testimonial-slider"],"example":{},"supports":{"html":false,"color":{"background":true,"text":true},"spacing":{"padding":true,"margin":true}},"textdomain":"testimonial-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","attributes":{"quote":{"type":"string","default":""},"authorName":{"type":"string","default":""},"authorRole":{"type":"string","default":""},"authorImageId":{"type":"number"},"authorImageUrl":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/testimonial-slide","version":"0.1.0","title":"Testimonial Slider Block","category":"text","icon":"format-quote","description":"Example block scaffolded with Create Block tool.","parent":["create-block/testimonial-slider"],"example":{},"supports":{"html":false,"color":{"background":true,"text":true},"spacing":{"padding":true,"margin":true}},"textdomain":"testimonial-slider-block","editorScript":"file:../index.js","editorStyle":"file:../index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","attributes":{"quote":{"type":"string","default":""},"authorName":{"type":"string","default":""},"authorRole":{"type":"string","default":""},"authorImageId":{"type":"number"},"authorImageUrl":{"type":"string","default":""}}}');
 
 /***/ }
 
