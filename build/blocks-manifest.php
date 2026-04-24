@@ -14,7 +14,15 @@ return array(
 			
 		),
 		'supports' => array(
-			'html' => false
+			'html' => false,
+			'color' => array(
+				'background' => true,
+				'text' => true
+			),
+			'spacing' => array(
+				'padding' => true,
+				'margin' => true
+			)
 		),
 		'textdomain' => 'testimonial-slider-block',
 		'editorScript' => 'file:./index.js',

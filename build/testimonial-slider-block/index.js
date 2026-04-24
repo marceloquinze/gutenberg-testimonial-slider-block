@@ -202,7 +202,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/testimonial-slider-block","version":"0.1.0","title":"Testimonial Slider Block","category":"text","icon":"format-quote","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"testimonial-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","attributes":{"quote":{"type":"string","default":""},"authorName":{"type":"string","default":""},"authorRole":{"type":"string","default":""},"authorImageId":{"type":"number"},"authorImageUrl":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/testimonial-slider-block","version":"0.1.0","title":"Testimonial Slider Block","category":"text","icon":"format-quote","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"color":{"background":true,"text":true},"spacing":{"padding":true,"margin":true}},"textdomain":"testimonial-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","attributes":{"quote":{"type":"string","default":""},"authorName":{"type":"string","default":""},"authorRole":{"type":"string","default":""},"authorImageId":{"type":"number"},"authorImageUrl":{"type":"string","default":""}}}');
 
 /***/ }
 
