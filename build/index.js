@@ -84,7 +84,11 @@ function Edit({
   const ALLOWED_BLOCKS = ['create-block/testimonial-slide'];
 
   // Criamos um template para que o usuário não comece com um slider vazio
-  const SLIDER_TEMPLATE = [['create-block/testimonial-slide', {}], ['create-block/testimonial-slide', {}]];
+  const SLIDER_TEMPLATE = [['create-block/testimonial-slide', {
+    placeholder: 'Testimonial 1...'
+  }], ['create-block/testimonial-slide', {
+    placeholder: 'Testimonial 2...'
+  }]];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
@@ -211,28 +215,31 @@ function Edit({
           children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Remove Image', 'testimonial-slider-block')
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-      tagName: "p",
-      className: "testimonial-text",
-      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Write the testimonial...', 'testimonial-slider-block'),
-      value: quote,
-      onChange: val => setAttributes({
-        quote: val
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-      tagName: "strong",
-      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Author Name', 'testimonial-slider-block'),
-      value: authorName,
-      onChange: val => setAttributes({
-        authorName: val
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-      tagName: "span",
-      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Role / Company', 'testimonial-slider-block'),
-      value: authorRole,
-      onChange: val => setAttributes({
-        authorRole: val
-      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "testimonials-text",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+        tagName: "p",
+        className: "testimonial-text",
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Write the testimonial...', 'testimonial-slider-block'),
+        value: quote,
+        onChange: val => setAttributes({
+          quote: val
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+        tagName: "strong",
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Author Name', 'testimonial-slider-block'),
+        value: authorName,
+        onChange: val => setAttributes({
+          authorName: val
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+        tagName: "span",
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Role / Company', 'testimonial-slider-block'),
+        value: authorRole,
+        onChange: val => setAttributes({
+          authorRole: val
+        })
+      })]
     })]
   });
 }

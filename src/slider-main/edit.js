@@ -19,8 +19,8 @@ export default function Edit( { attributes, setAttributes } ) {
 
     // Criamos um template para que o usuário não comece com um slider vazio
     const SLIDER_TEMPLATE = [
-        [ 'create-block/testimonial-slide', {} ],
-        [ 'create-block/testimonial-slide', {} ]
+        [ 'create-block/testimonial-slide', { placeholder: 'Testimonial 1...' } ],
+        [ 'create-block/testimonial-slide', { placeholder: 'Testimonial 2...' } ]
     ];
 
     return (

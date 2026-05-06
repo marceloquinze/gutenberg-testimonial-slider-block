@@ -36,25 +36,27 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				) }
 			</div>
-			<RichText
-				tagName="p"
-				className="testimonial-text"
-				placeholder={ __( 'Write the testimonial...', 'testimonial-slider-block' ) }
-				value={ quote }
-				onChange={ ( val ) => setAttributes( { quote: val } ) }
-			/>
-			<RichText
-				tagName="strong"
-				placeholder={ __( 'Author Name', 'testimonial-slider-block' ) }
-				value={ authorName }
-				onChange={ ( val ) => setAttributes( { authorName: val } ) }
-			/>
-			<RichText
-				tagName="span"
-				placeholder={ __( 'Role / Company', 'testimonial-slider-block' ) }
-				value={ authorRole }
-				onChange={ ( val ) => setAttributes( { authorRole: val } ) }
-			/>
+			<div className="testimonials-text">
+				<RichText
+					tagName="p"
+					className="testimonial-text"
+					placeholder={ __( 'Write the testimonial...', 'testimonial-slider-block' ) }
+					value={ quote }
+					onChange={ ( val ) => setAttributes( { quote: val } ) }
+				/>
+				<RichText
+					tagName="strong"
+					placeholder={ __( 'Author Name', 'testimonial-slider-block' ) }
+					value={ authorName }
+					onChange={ ( val ) => setAttributes( { authorName: val } ) }
+				/>
+				<RichText
+					tagName="span"
+					placeholder={ __( 'Role / Company', 'testimonial-slider-block' ) }
+					value={ authorRole }
+					onChange={ ( val ) => setAttributes( { authorRole: val } ) }
+				/>
+			</div>
 		</div>
 	);
 }

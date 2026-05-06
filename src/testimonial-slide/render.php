@@ -14,12 +14,12 @@ $author_img_id 		= $attributes['authorImageId'] ?? 0;
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>
+	<?php if( $author_img_id ) : ?> 
+		<div class="testimonial-image">
+			<?php echo wp_get_attachment_image( $author_img_id, 'thumb' ); ?>
+		</div>
+	<?php endif; ?>
 	<div class="testimonial-content">
-		<?php if( $author_img_id ) : ?> 
-			<div class="testimonial-image">
-				<?php echo wp_get_attachment_image( $author_img_id, 'thumb' ); ?>
-			</div>
-		<?php endif; ?>
 		<blockquote class="testimonial-quote">
 			<?php echo wp_kses_post( $quote ); ?>
 		</blockquote>
