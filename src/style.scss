@@ -81,16 +81,30 @@
 		position: relative;
 		bottom: 0;
 		margin-top: 20px;
+
+		.custom-bullets {
+			width: 22px;
+			height: 22px;
+			border-radius: 50%;
+			line-height: 22px;
+
+			em {
+				font-size: 0.8rem;
+				color: #fff;
+			}
+		}
 	}
 
-	.is-style-modern-card {
+	&.is-style-modern-card .swiper-slide,
+	&.is-style-modern-card .wp-block-create-block-testimonial-slide {
 		background-color: #fff;
 		padding: 30px;
 		border-radius: 15px;
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	}
 	
-	.is-style-minimal-quote {
+	&.is-style-minimal-quote .swiper-slide,
+	&.is-style-minimal-quote .wp-block-create-block-testimonial-slide {
 		background: transparent;
 		border-left: 4px solid #d6d6d6;
 		padding-left: 20px;

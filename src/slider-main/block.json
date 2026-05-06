@@ -31,6 +31,10 @@
         "slidesPerViewTablet": {
             "type": "number",
             "default": 1
+        },
+        "paginationType": {
+            "type": "string",
+            "default": "bullets"
         }
     },
     "supports": {
@@ -39,6 +43,7 @@
             "margin": true,
             "padding": true
         },
-        "color": {}
+        "color": {},
+        "className": true
     }
 }

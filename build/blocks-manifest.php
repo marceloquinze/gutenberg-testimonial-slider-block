@@ -34,6 +34,10 @@ return array(
 			'slidesPerViewTablet' => array(
 				'type' => 'number',
 				'default' => 1
+			),
+			'paginationType' => array(
+				'type' => 'string',
+				'default' => 'bullets'
 			)
 		),
 		'supports' => array(
@@ -47,7 +51,8 @@ return array(
 			),
 			'color' => array(
 				
-			)
+			),
+			'className' => true
 		)
 	),
 	'testimonial-slide' => array(

@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InnerBlocks, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl, RangeControl } from '@wordpress/components';
+import { PanelBody, ToggleControl, RangeControl, SelectControl } from '@wordpress/components';
 
 import '../style.scss';
 import './editor.scss';
@@ -11,7 +11,8 @@ export default function Edit( { attributes, setAttributes } ) {
         autoPlay, 
         autoPlayDelay,
         slidesPerView,
-        slidesPerViewTablet
+        slidesPerViewTablet,
+        paginationType
      } = attributes;
 
     // Restringimos para que APENAS o bloco de slide possa ser inserido aqui
@@ -32,6 +33,20 @@ export default function Edit( { attributes, setAttributes } ) {
                         checked={ showPagination }
                         onChange={ ( val ) => setAttributes( { showPagination: val } ) }
                     />
+                    { showPagination && (
+                        <SelectControl 
+                            label={ __( 'Pagination Type', 'testimonial-slider-block' ) }
+                            value={ paginationType }
+                            options={ [
+                                { value: 'bullets', label: __( 'Bullets', 'testimonial-slider-block' ) },
+                                { value: 'fraction', label: __( 'Fraction', 'testimonial-slider-block' ) },
+                                { value: 'progressbar', label: __( 'Progress Bar', 'testimonial-slider-block' ) },
+                                { value: 'dynamic', label: __( 'Dynamic', 'testimonial-slider-block' ) },
+                                { value: 'custom', label: __( 'Custom', 'testimonial-slider-block' ) }
+                            ] }
+                            onChange={ ( val ) => setAttributes( { paginationType: val } ) }
+                        />
+                    )}
                     <ToggleControl
                         label={ __( 'Auto Play', 'testimonial-slider-block' ) }
                         checked={ autoPlay }

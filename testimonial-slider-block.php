@@ -26,22 +26,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function create_block_testimonial_slider_block_block_init() {
 	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
+
+	register_block_style(
+		'create-block/testimonial-slider',
+		array(
+			'name'      	=> 'modern-card',
+			'label'     	=> __( 'Modern Card', 'testimonial-slider-block' ),
+			'is_default'   => true
+		)
+	);
+	
+	register_block_style(
+		'create-block/testimonial-slider',
+		array(
+			'name'      	=> 'minimal-quote',
+			'label'     	=> __( 'Minimal Quote', 'testimonial-slider-block' ),
+		)
+	);
 }
 add_action( 'init', 'create_block_testimonial_slider_block_block_init' );
-
-register_block_style(
-	'create-block/testimonial-slide',
-	array(
-		'name'      	=> 'modern-card',
-		'label'     	=> __( 'Modern Card', 'testimonial-slider-block' ),
-		'is_default'   => true
-	)
-);
-
-register_block_style(
-	'create-block/testimonial-slide',
-	array(
-		'name'      	=> 'minimal-quote',
-		'label'     	=> __( 'Minimal Quote', 'testimonial-slider-block' ),
-	)
-);

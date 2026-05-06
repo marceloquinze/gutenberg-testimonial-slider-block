@@ -30,6 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
+				dynamicBullets: settings.paginationType === 'dynamic',
+
+				...( (settings.paginationType !== 'dynamic' && settings.paginationType !== 'custom') && { 
+					type: settings.paginationType 
+				}),
+
+				...( settings.paginationType === 'custom' && {
+					renderBullet: function (index, className) {
+						return '<span class=" custom-bullets ' + className + '"><em>' + (index + 1) + '</em></span>';
+					}
+				}),
 			},
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -43,7 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				disableOnInteractions: false,
 			}
 		}
-
+		console.log(SwiperConfig);
+		
 		new Swiper( container, SwiperConfig );
 	});
 });
+
