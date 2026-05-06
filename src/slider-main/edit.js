@@ -3,6 +3,7 @@ import { useBlockProps, InnerBlocks, InspectorControls } from '@wordpress/block-
 import { PanelBody, ToggleControl } from '@wordpress/components';
 
 import '../style.scss';
+import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
     const { showPagination } = attributes;
