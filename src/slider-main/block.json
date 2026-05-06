@@ -15,6 +15,14 @@
         "showPagination": {
             "type": "boolean",
             "default": true
+        },
+        "autoPlay": {
+            "type": "boolean",
+            "default": false
+        },
+        "autoPlayDelay": {
+            "type": "number",
+            "default": 3000
         }
     },
     "supports": {

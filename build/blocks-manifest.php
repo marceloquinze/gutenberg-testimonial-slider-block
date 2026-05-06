@@ -18,6 +18,14 @@ return array(
 			'showPagination' => array(
 				'type' => 'boolean',
 				'default' => true
+			),
+			'autoPlay' => array(
+				'type' => 'boolean',
+				'default' => false
+			),
+			'autoPlayDelay' => array(
+				'type' => 'number',
+				'default' => 3000
 			)
 		),
 		'supports' => array(

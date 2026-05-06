@@ -1,12 +1,12 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InnerBlocks, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, ToggleControl } from '@wordpress/components';
+import { PanelBody, ToggleControl, RangeControl } from '@wordpress/components';
 
 import '../style.scss';
 import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
-    const { showPagination } = attributes;
+    const { showPagination, autoPlay, autoPlayDelay } = attributes;
 
     // Restringimos para que APENAS o bloco de slide possa ser inserido aqui
     const ALLOWED_BLOCKS = [ 'create-block/testimonial-slide' ];
@@ -26,6 +26,21 @@ export default function Edit( { attributes, setAttributes } ) {
                         checked={ showPagination }
                         onChange={ ( val ) => setAttributes( { showPagination: val } ) }
                     />
+                    <ToggleControl
+                        label={ __( 'Auto Play', 'testimonial-slider-block' ) }
+                        checked={ autoPlay }
+                        onChange={ ( val ) => setAttributes( { autoPlay: val } ) }
+                    />
+                    { autoPlay && (
+                        <RangeControl 
+                            label={ __( 'Autoplay delay (ms)', 'testimonial-slider-block' ) }
+                            value={ autoPlayDelay }
+                            onChange={ ( val ) => setAttributes( { autoPlayDelay: val } ) }
+                            min={ 1000 }
+                            max={ 10000 }
+                            step={ 500 }
+                        />
+                    )}
                 </PanelBody>
             </InspectorControls>
 

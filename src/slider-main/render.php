@@ -3,9 +3,17 @@
  * Testimonial Slider Render Template
  */
 
+// Additional Slider Settings
+$settings = [
+	'autoplay'	=> $attributes['autoPlay'] ?? false,
+	'delay'		=> $attributes['autoPlayDelay'] ?? 3000,
+];
+
 $wrapper_attributes = get_block_wrapper_attributes([
-	'class'	=> 'swiper testimonial-slider-container'
+	'class'			=> 'swiper testimonial-slider-container',
+	'data-settings'	=> wp_json_encode( $settings ),
 ]);
+
 ?>
 <div <?php echo $wrapper_attributes; ?>>
 	<div class="swiper-wrapper">

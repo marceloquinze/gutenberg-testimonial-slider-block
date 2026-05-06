@@ -1,12 +1,15 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const containers = document.querySelectorAll('.testimonial-slider-container');
 
 	containers.forEach( container => {
-		new Swiper( container, {
-			modules: [Navigation, Pagination],
+
+		const settings = container.dataset.settings ? JSON.parse(container.dataset.settings) : {};
+
+		const SwiperConfig = {
+			modules: [Navigation, Pagination, Autoplay],
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 30,
@@ -18,6 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
-		});
+		};
+
+		if( settings.autoplay ){
+			SwiperConfig.autoplay = {
+				delay: settings.delay,
+				disableOnInteractions: false,
+			}
+		}
+
+		new Swiper( container, SwiperConfig );
 	});
 });
