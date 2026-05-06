@@ -44,6 +44,9 @@ return array(
 			'spacing' => array(
 				'margin' => true,
 				'padding' => true
+			),
+			'color' => array(
+				
 			)
 		)
 	),
@@ -64,10 +67,6 @@ return array(
 		),
 		'supports' => array(
 			'html' => false,
-			'color' => array(
-				'background' => true,
-				'text' => true
-			),
 			'spacing' => array(
 				'padding' => true,
 				'margin' => true

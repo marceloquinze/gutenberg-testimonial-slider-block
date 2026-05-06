@@ -8,17 +8,25 @@
 @use 'swiper/css/navigation';
 @use 'swiper/css/pagination';
 
+:root {
+	--swiper-navigation-size: 20px;
+}
+
 .wp-block-create-block-testimonial-slider {
-	padding: 40px 20px;
+	--swiper-theme-color: currentColor;
 	position: relative;
 	overflow: hidden;
-	width: 100%;
 	height: auto;
 	min-height: 200px;
+	padding: 0 50px;	
 
-	background-color: #dff2fa;
-	color: #000;
-	padding: 2px;		
+	*, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+	&.has-accent-color {
+        --swiper-theme-color: var(--wp--preset--color--accent);
+    }
 
 	.swiper-slide {
 		height: auto;
@@ -55,6 +63,9 @@
 		margin-bottom: 20px;
 	}
 
+	.swiper-button-prev { left: 10px; }
+    .swiper-button-next { right: 10px; }
+	
 	.swiper-button-next, 
 	.swiper-button-prev {
 		color: #000;
@@ -72,5 +83,20 @@
 		position: relative;
 		bottom: 0;
 		margin-top: 20px;
+	}
+
+	.is-style-modern-card {
+		background-color: #fff;
+		padding: 30px;
+		border-radius: 15px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+	
+	.is-style-minimal-quote {
+		background: transparent;
+		border-left: 4px solid #000;
+		padding-left: 20px;
+		border-radius: 0;
+		box-shadow: none;
 	}
 }

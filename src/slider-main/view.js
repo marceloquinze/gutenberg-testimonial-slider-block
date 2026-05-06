@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				},
 				"@1.75": {
 					slidesPerView: settings.slidesPerView,
-					spaceBetween: 30
+					spaceBetween: 10
 				}
 			},
 			pagination: {

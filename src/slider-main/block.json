@@ -38,6 +38,7 @@
         "spacing": {
             "margin": true,
             "padding": true
-        }
+        },
+        "color": {}
     }
 }
