@@ -23,6 +23,14 @@
         "autoPlayDelay": {
             "type": "number",
             "default": 3000
+        },
+        "slidesPerView": {
+            "type": "number",
+            "default": 1
+        },
+        "slidesPerViewTablet": {
+            "type": "number",
+            "default": 1
         }
     },
     "supports": {

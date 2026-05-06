@@ -26,6 +26,14 @@ return array(
 			'autoPlayDelay' => array(
 				'type' => 'number',
 				'default' => 3000
+			),
+			'slidesPerView' => array(
+				'type' => 'number',
+				'default' => 1
+			),
+			'slidesPerViewTablet' => array(
+				'type' => 'number',
+				'default' => 1
 			)
 		),
 		'supports' => array(

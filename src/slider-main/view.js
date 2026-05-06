@@ -12,7 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
 			modules: [Navigation, Pagination, Autoplay],
 			loop: true,
 			slidesPerView: 1,
-			spaceBetween: 30,
+			spaceBetween: 20,
+			breakpoints: {
+				"@0.00": {
+					slidesPerView: 1,
+					spaceBetween: 25
+				},
+				"@1.00": {
+					slidesPerView: settings.slidesPerViewTablet,
+					spaceBetween: 25
+				},
+				"@1.75": {
+					slidesPerView: settings.slidesPerView,
+					spaceBetween: 30
+				}
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,

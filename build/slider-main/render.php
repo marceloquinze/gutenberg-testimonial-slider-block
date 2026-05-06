@@ -5,8 +5,10 @@
 
 // Additional Slider Settings
 $settings = [
-	'autoplay'	=> $attributes['autoPlay'] ?? false,
-	'delay'		=> $attributes['autoPlayDelay'] ?? 3000,
+	'autoplay'					=> $attributes['autoPlay'] ?? false,
+	'delay'						=> $attributes['autoPlayDelay'] ?? 3000,
+	'slidesPerView'				=> $attributes['slidesPerView'] ?? 1,
+	'slidesPerViewTablet'		=> $attributes['slidesPerViewTablet'] ?? 1,
 ];
 
 $wrapper_attributes = get_block_wrapper_attributes([

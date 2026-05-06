@@ -6,7 +6,13 @@ import '../style.scss';
 import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
-    const { showPagination, autoPlay, autoPlayDelay } = attributes;
+    const { 
+        showPagination, 
+        autoPlay, 
+        autoPlayDelay,
+        slidesPerView,
+        slidesPerViewTablet
+     } = attributes;
 
     // Restringimos para que APENAS o bloco de slide possa ser inserido aqui
     const ALLOWED_BLOCKS = [ 'create-block/testimonial-slide' ];
@@ -41,6 +47,20 @@ export default function Edit( { attributes, setAttributes } ) {
                             step={ 500 }
                         />
                     )}
+                    <RangeControl 
+                        label={ __( 'Slides per view (Desktop)', 'testimonial-slider-block' ) }
+                        value={ slidesPerView }
+                        onChange={ ( val ) => setAttributes( { slidesPerView: val } ) }
+                        min={ 1 }
+                        max={ 4 }
+                      />                    
+                    <RangeControl 
+                        label={ __( 'Slides per view (Tablet)', 'testimonial-slider-block' ) }
+                        value={ slidesPerViewTablet }
+                        onChange={ ( val ) => setAttributes( { slidesPerViewTablet: val } ) }
+                        min={ 1 }
+                        max={ 4 }
+                      />                    
                 </PanelBody>
             </InspectorControls>
 
