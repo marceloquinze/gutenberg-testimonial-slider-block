@@ -15,13 +15,11 @@ export default function Edit( { attributes, setAttributes } ) {
         paginationType
      } = attributes;
 
-    // Restringimos para que APENAS o bloco de slide possa ser inserido aqui
-    const ALLOWED_BLOCKS = [ 'create-block/testimonial-slide' ];
+    const ALLOWED_BLOCKS = [ 'inbrackets/testimonial-slide' ];
 
-    // Criamos um template para que o usuário não comece com um slider vazio
     const SLIDER_TEMPLATE = [
-        [ 'create-block/testimonial-slide', { placeholder: 'Testimonial 1...' } ],
-        [ 'create-block/testimonial-slide', { placeholder: 'Testimonial 2...' } ]
+        [ 'inbrackets/testimonial-slide', { placeholder: 'Testimonial 1...' } ],
+        [ 'inbrackets/testimonial-slide', { placeholder: 'Testimonial 2...' } ]
     ];
 
     return (

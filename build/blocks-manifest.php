@@ -4,7 +4,7 @@ return array(
 	'slider-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/testimonial-slider',
+		'name' => 'inbrackets/testimonial-slider',
 		'title' => 'Testimonial Slider',
 		'category' => 'text',
 		'icon' => 'columns',
@@ -58,14 +58,14 @@ return array(
 	'testimonial-slide' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/testimonial-slide',
+		'name' => 'inbrackets/testimonial-slide',
 		'version' => '0.1.0',
 		'title' => 'Testimonial Slider Block',
 		'category' => 'text',
 		'icon' => 'format-quote',
 		'description' => 'Example block scaffolded with Create Block tool.',
 		'parent' => array(
-			'create-block/testimonial-slider'
+			'inbrackets/testimonial-slider'
 		),
 		'example' => array(
 			

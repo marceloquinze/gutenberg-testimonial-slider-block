@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name": "create-block/testimonial-slider",
+    "name": "inbrackets/testimonial-slider",
     "title": "Testimonial Slider",
     "category": "text",
     "icon": "columns",

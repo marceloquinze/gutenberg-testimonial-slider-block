@@ -1,16 +1,17 @@
 <?php
 /**
  * Plugin Name:       Testimonial Slider Block
- * Description:       Example block scaffolded with Create Block tool.
- * Version:           0.1.0
- * Requires at least: 6.8
- * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Description:       A slider of testimonials.
+ * Version:           1.0.0
+ * Requires at least: 6.2
+ * Requires PHP:      8.0
+ * Author:            InBrackets
+ * Author URI:        https://inbrackets.dev
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       testimonial-slider-block
  *
- * @package CreateBlock
+ * @package inbrackets
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,7 +29,7 @@ function create_block_testimonial_slider_block_block_init() {
 	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
 
 	register_block_style(
-		'create-block/testimonial-slider',
+		'inbrackets/testimonial-slider',
 		array(
 			'name'      	=> 'modern-card',
 			'label'     	=> __( 'Modern Card', 'testimonial-slider-block' ),
@@ -37,7 +38,7 @@ function create_block_testimonial_slider_block_block_init() {
 	);
 	
 	register_block_style(
-		'create-block/testimonial-slider',
+		'inbrackets/testimonial-slider',
 		array(
 			'name'      	=> 'minimal-quote',
 			'label'     	=> __( 'Minimal Quote', 'testimonial-slider-block' ),
