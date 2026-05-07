@@ -53,6 +53,32 @@ return array(
 				
 			),
 			'className' => true
+		),
+		'example' => array(
+			'attributes' => array(
+				'autoPlay' => true,
+				'paginationType' => 'dynamic'
+			),
+			'innerBlocks' => array(
+				array(
+					'name' => 'inbrackets/testimonial-slide',
+					'attributes' => array(
+						'authorName' => 'Marcelo Vieira',
+						'authorRole' => 'WordPress Developer',
+						'quote' => 'This slider is looking amazing with the block preview feature!',
+						'authorImageUrl' => 'https://pd.w.org/2026/05/56869fa42ee3a2f19.45917503.jpeg'
+					)
+				),
+				array(
+					'name' => 'inbrackets/testimonial-slide',
+					'attributes' => array(
+						'authorName' => 'Sarah Jones',
+						'authorRole' => 'Javascript Developer',
+						'quote' => 'The nested block architecture makes it so flexible.',
+						'authorImageUrl' => 'https://pd.w.org/2026/04/64069e3a78591dea2.64755819-rotated.jpeg'
+					)
+				)
+			)
 		)
 	),
 	'testimonial-slide' => array(

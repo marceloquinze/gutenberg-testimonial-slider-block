@@ -118,3 +118,14 @@
 		box-shadow: none;
 	}
 }
+
+.block-editor-block-preview__content {
+    .testimonial-image img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+        display: block;
+    }
+}
