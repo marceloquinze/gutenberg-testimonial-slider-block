@@ -26,7 +26,7 @@ Engineered with performance and user experience in mind, it loads frontend scrip
 == Installation ==
 
 = Manual Installation =
-1. Upload the entire `testimonial-slider-block` directory to your `/wp-content/plugins/` directory.
+1. Upload the entire `ib-testimonial-slider-block` directory to your `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
 = Developer & Build Setup =

@@ -1,6 +1,13 @@
+/**
+ * WordPress dependencies
+ */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText, MediaPlaceholder } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components'
+
+/**
+ * Internal dependencies
+ */
 import './editor.scss';
 
 export default function Edit( { attributes, setAttributes } ) {
@@ -21,17 +28,17 @@ export default function Edit( { attributes, setAttributes } ) {
 						onSelect={ onSelectImage }
 						allowedTypes={ [ 'image' ] }
 						multiple={ false }
-						labels={ { title: __( 'Author Image', 'testimonial-slider-block' ) } }
+						labels={ { title: __( 'Author Image', 'ib-testimonial-slider-block' ) } }
 					/>
 				) : (
 					<div className="image-preview">
-						<img src={ authorImageUrl } alt="" />
+						<img src={ authorImageUrl } alt={ authorName } />
 						<Button
 							onClick={ () => setAttributes( { authorImageId: 0, authorImageUrl: '' } ) }
 							isDestructive
 							variant="link"
 						>
-							{ __( 'Remove Image', 'testimonial-slider-block' ) }
+							{ __( 'Remove Image', 'ib-testimonial-slider-block' ) }
 						</Button>
 					</div>
 				) }
@@ -40,19 +47,19 @@ export default function Edit( { attributes, setAttributes } ) {
 				<RichText
 					tagName="p"
 					className="testimonial-text"
-					placeholder={ __( 'Write the testimonial...', 'testimonial-slider-block' ) }
+					placeholder={ __( 'Write the testimonial...', 'ib-testimonial-slider-block' ) }
 					value={ quote }
 					onChange={ ( val ) => setAttributes( { quote: val } ) }
 				/>
 				<RichText
 					tagName="strong"
-					placeholder={ __( 'Author Name', 'testimonial-slider-block' ) }
+					placeholder={ __( 'Author Name', 'ib-testimonial-slider-block' ) }
 					value={ authorName }
 					onChange={ ( val ) => setAttributes( { authorName: val } ) }
 				/>
 				<RichText
 					tagName="span"
-					placeholder={ __( 'Role / Company', 'testimonial-slider-block' ) }
+					placeholder={ __( 'Role / Company', 'ib-testimonial-slider-block' ) }
 					value={ authorRole }
 					onChange={ ( val ) => setAttributes( { authorRole: val } ) }
 				/>

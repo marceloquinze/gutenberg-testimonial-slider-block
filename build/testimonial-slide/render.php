@@ -1,8 +1,9 @@
 <?php
 /**
- * Testimonial Slide Render Template
+ * Testimonial Slide Render Template (child block)
  */
 
+// Additional Slider Settings
 $wrapper_attributes = get_block_wrapper_attributes([
 	'class'	=> 'swiper-slide testimonial-item'
 ]);
@@ -11,6 +12,7 @@ $quote 				= $attributes['quote'] ?? '';
 $author_name 		= $attributes['authorName'] ?? '';
 $author_role 		= $attributes['authorRole'] ?? '';
 $author_img_id 		= $attributes['authorImageId'] ?? 0;
+
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>

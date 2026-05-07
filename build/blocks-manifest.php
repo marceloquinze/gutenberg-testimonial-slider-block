@@ -6,10 +6,10 @@ return array(
 		'apiVersion' => 3,
 		'name' => 'inbrackets/testimonial-slider',
 		'title' => 'Testimonial Slider',
-		'category' => 'text',
-		'icon' => 'columns',
+		'category' => 'media',
+		'icon' => 'slides',
 		'description' => 'A container for your testimonial slides.',
-		'textdomain' => 'testimonial-slider-block',
+		'textdomain' => 'ib-testimonial-slider-block',
 		'editorScript' => 'file:../index.js',
 		'viewScript' => 'file:./view.js',
 		'style' => 'file:../style-index.css',
@@ -61,9 +61,9 @@ return array(
 		'name' => 'inbrackets/testimonial-slide',
 		'version' => '0.1.0',
 		'title' => 'Testimonial Slider Block',
-		'category' => 'text',
+		'category' => 'media',
 		'icon' => 'format-quote',
-		'description' => 'Example block scaffolded with Create Block tool.',
+		'description' => 'An individual slide for your slideshow block',
 		'parent' => array(
 			'inbrackets/testimonial-slider'
 		),
@@ -77,7 +77,7 @@ return array(
 				'margin' => true
 			)
 		),
-		'textdomain' => 'testimonial-slider-block',
+		'textdomain' => 'ib-testimonial-slider-block',
 		'editorScript' => 'file:../index.js',
 		'editorStyle' => 'file:../index.css',
 		'render' => 'file:./render.php',

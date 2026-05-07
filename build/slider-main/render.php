@@ -1,6 +1,6 @@
 <?php
 /**
- * Testimonial Slider Render Template
+ * Testimonial Slider Render Template (parent block)
  */
 
 // Additional Slider Settings

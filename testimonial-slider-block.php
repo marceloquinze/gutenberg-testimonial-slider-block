@@ -9,7 +9,7 @@
  * Author URI:        https://inbrackets.dev
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       testimonial-slider-block
+ * Text Domain:       ib-testimonial-slider-block
  *
  * @package inbrackets
  */
@@ -28,11 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 function create_block_testimonial_slider_block_block_init() {
 	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
 
+	/**
+	 * Register block styles 
+	 */
 	register_block_style(
 		'inbrackets/testimonial-slider',
 		array(
 			'name'      	=> 'modern-card',
-			'label'     	=> __( 'Modern Card', 'testimonial-slider-block' ),
+			'label'     	=> __( 'Modern Card', 'ib-testimonial-slider-block' ),
 			'is_default'   => true
 		)
 	);
@@ -41,7 +44,7 @@ function create_block_testimonial_slider_block_block_init() {
 		'inbrackets/testimonial-slider',
 		array(
 			'name'      	=> 'minimal-quote',
-			'label'     	=> __( 'Minimal Quote', 'testimonial-slider-block' ),
+			'label'     	=> __( 'Minimal Quote', 'ib-testimonial-slider-block' ),
 		)
 	);
 }
